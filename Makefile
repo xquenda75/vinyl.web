@@ -32,5 +32,10 @@ install-nginx:
 	nano default
 	/etc/init.d/nginx restart
 
+	ssh-keygen
+
 	git config --global user.name "Jorge A Lopez"  
 	git config --global user.email "xquenda14@yahoo.com.mx"
+
+	sudo apt install nodejs
+	sudo apt install npm

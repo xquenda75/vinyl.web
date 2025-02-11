@@ -32,7 +32,7 @@ function AddAlbum({}: Props) {
         headers: { Authorization: `Bearer ${token}` },
       });
       Swal.fire("Album guardado", "", "success");
-    } catch (error) {
+    } catch (error: any) {
       setMessageError("Error al guardar el album");
       console.log("Error al guardar el album");
     } finally {

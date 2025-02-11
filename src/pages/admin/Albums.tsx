@@ -26,7 +26,7 @@ function Albums({}: Props) {
       });
       console.log(response.data);
       setAlbums(response.data);
-    } catch (error) {
+    } catch (error: any) {
       if (error.response.status === 401) {
         setMessageError("Acceso no autorizado");
         Swal.fire("Acceso no autorizado", "", "error");

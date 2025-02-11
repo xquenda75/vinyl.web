@@ -34,7 +34,7 @@ function EditAlbum({}: Props) {
         if (response.status === 200) {
           console.log("Album obtenido correctamente");
         }
-      } catch (error) {
+      } catch (error: any) {
         console.log("Error al obtener el album", error);
         if (error.response.status === 401) {
           setMessageError("Acceso no autorizado");
@@ -68,7 +68,7 @@ function EditAlbum({}: Props) {
         confirmButtonText: "Ok",
       });
       navigate("/albums");
-    } catch (error) {
+    } catch (error: any) {
       if (error.response.status === 401) {
         setMessageError("Acceso no autorizado");
         console.log("Acceso no autorizado");

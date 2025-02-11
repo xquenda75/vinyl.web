@@ -46,7 +46,7 @@ function Login({}: Props) {
       console.log("token:", response.data.token);
       console.log("Despues del login");
       setMessageError("");
-    } catch (error) {
+    } catch (error: any) {
       console.log("Code Error: ", error.response.status);
 
       if (error.response.status === 401) {

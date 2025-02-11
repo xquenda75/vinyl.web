@@ -31,3 +31,6 @@ install-nginx:
 
 	nano default
 	/etc/init.d/nginx restart
+
+	git config --global user.name "Jorge A Lopez"  
+	git config --global user.email "xquenda14@yahoo.com.mx"

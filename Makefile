@@ -39,3 +39,5 @@ install-nginx:
 
 	sudo apt install nodejs
 	sudo apt install npm
+
+	sudo ln -s /etc/nginx/sites-available/vinyl-app /etc/nginx/sites-enabled/

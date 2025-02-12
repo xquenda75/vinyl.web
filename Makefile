@@ -30,7 +30,7 @@ install-nginx:
 	sudo ufw allow 'Nginx Full'
 
 	nano default
-	/etc/init.d/nginx restart
+	sudo /etc/init.d/nginx restart
 
 	ssh-keygen
 

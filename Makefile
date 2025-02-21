@@ -15,7 +15,7 @@ npm-i-dotenv:
 	npm install dotenv
 
 login-ec2-ubuntu:
-	ssh -i ../aws_config/webserverlinux.pem ubuntu@3.95.137.126
+	ssh -i ../aws_config/webserverlinux.pem ubuntu@54.152.192.5
 
 update-ubuntu:
 	sudo apt update && sudo apt upgrade -y
@@ -41,3 +41,18 @@ install-nginx:
 	sudo apt install npm
 
 	sudo ln -s /etc/nginx/sites-available/vinyl-app /etc/nginx/sites-enabled/
+
+#Cuenta AWS 390403871044
+
+aws-s3-sync:
+	aws s3 sync dist s3://website-vinyl --delete --acl 'public-read'
+
+aws-eb-install:
+	pip install awsebcli --upgrade --user
+
+aws-validate:
+	python --versions
+	pip --version
+	eb --version
+
+
